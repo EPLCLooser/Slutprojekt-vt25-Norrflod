@@ -77,3 +77,8 @@ h2{
 #vitmenu{
     color: white;
 }
+img {
+    object-fit: cover;
+    height: 90vh;
+    width: 100%;
+}
