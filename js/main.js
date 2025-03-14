@@ -1,7 +1,9 @@
 let menuButton = document.querySelector(".menu-button")
+let closeButton = document.querySelector(".close-button")
 let layer = document.querySelector(".fade-layer")
 
 menuButton.addEventListener("click",showMenu)
+closeButton.addEventListener("click",showMenu)
 layer.addEventListener("click",showMenu)
 
 function showMenu(){
