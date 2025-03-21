@@ -7,7 +7,7 @@ a{
 @media screen and (max-width: 500px){
     #erfarenhet{
         display: grid;
-        grid-template-rows: 30vh repeat(3, 50vh) 10vh;
+        grid-template-rows: 30vh 150vh 10vh;
     }
     #bodystart{
         display: grid;
@@ -46,7 +46,7 @@ a{
         justify-content: space-evenly;
     }
     .menu-links{
-        width: 35vw;
+        width: 50vw;
         height: 15vh;
         background-color: darkblue;
         border-radius: 5px;
@@ -55,6 +55,22 @@ a{
         justify-content: center;
         border: black solid 1px;
         align-self: center;
+        color: white;
+    }   
+    .er_sec{
+        height: auto;
+        width: 70vw;
+        background-color: darkblue;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        margin: 20px;
+    }
+    #er_main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 @media screen and (min-width: 501px){
@@ -129,10 +145,19 @@ h2{
 
 img {
     object-fit: cover;
-    height: 90vh;
+    height: 100%;
     width: 100%;
 }
 
 #linkedin{
     font-size: 8vh;
+}
+
+#linkWrapper{
+    display: flex;
+    height: 90vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
