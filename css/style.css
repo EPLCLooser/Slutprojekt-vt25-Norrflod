@@ -1,3 +1,8 @@
+:root{
+    --themeColor: darkblue;  
+}
+
+
 body{
     margin: 0px;
 }
@@ -15,7 +20,7 @@ a{
     }
     #ommig{
         display: grid;
-        grid-template-rows: 30vh 20vh 30vh minmax(30vh, auto) 10vh;
+        grid-template-rows: 30vh 250px 30vh minmax(30vh, auto) 10vh;
     }
     #projekt{
         display: grid; 
@@ -32,7 +37,7 @@ a{
     .linkdiv{
         width: 90vw;
         height: 20vh;
-        background-color: darkblue;
+        background-color: var(--themeColor);
         border-radius: 5px;
         display: flex;
         align-items: center;
@@ -48,7 +53,7 @@ a{
     .menu-links{
         width: 50vw;
         height: 15vh;
-        background-color: darkblue;
+        background-color: var(--themeColor);
         border-radius: 5px;
         display: flex;
         align-items: center;
@@ -57,10 +62,10 @@ a{
         align-self: center;
         color: white;
     }   
-    .er_sec{
+    .ul_div{
         height: auto;
         width: 70vw;
-        background-color: darkblue;
+        background-color: var(--themeColor);
         color: white;
         display: flex;
         flex-direction: column;
@@ -72,13 +77,25 @@ a{
         flex-direction: column;
         align-items: center;
     }
-    .er_h2{
+    .ul_h2{
         margin-left: 16px;
+        margin-bottom: 0px;
+    }
+    #download_container{
+        width: 30vw;
+        padding: 10px;
+        border-radius: 5px;
     }
 
 }
 @media screen and (min-width: 501px){
-
+    .link_hover:hover{
+        background-color: white !important;
+        color: var(--themeColor) !important;
+    }
+    #linkedin:hover{
+        color: black;
+    }
 }
 
 h2{
@@ -156,6 +173,7 @@ img {
 
 #linkedin{
     font-size: 8vh;
+    color: var(--themeColor);
 }
 
 #linkWrapper{
@@ -166,7 +184,32 @@ img {
     align-items: center;
     justify-content: space-around;
 }
-#er_textsec{
+.textsec{
     max-width: 700px;
     padding: 5vw;
+}
+#download_container{
+    color: white;
+    background-color: var(--themeColor);
+    text-align: center;
+    border: black solid 1px;
+}
+.hor_center{
+    justify-self: center;
+}
+#ansiktsimg{
+    border-radius: 100px;
+    object-fit: fill;
+    width: 200px;
+    height: 200px;
+    aspect-ratio: 1/1;
+    filter: grayscale(100%);
+    align-self: center;
+    border: black solid 2px;
+}
+ul{
+    margin-right: 16px;
+}
+li{
+    margin: 2px;
 }
