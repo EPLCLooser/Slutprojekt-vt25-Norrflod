@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>Norrflod</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Norrflod</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
 <body id="index">
   <header>
     <div class="menu-button">
@@ -17,43 +19,52 @@
     </div>
     <picture>
       <source media="(min-width:501px)" srcset="img/desktop-cover-img-river.jpg" alt="Bild på vattenfall">
-      <img src="img/phone-cover-img-river.jpg" alt="Bild på vattenfall">
+      <img class="phone-background-img" src="img/phone-cover-img-river.jpg" alt="Bild på vattenfall">
     </picture>
+    <div class="h1-container">
+      <h1>Lucas Norrflod</h1>
+    </div>
   </header>
     <nav class="menu" aria-label="primary">
       <div class="close-button">
         <i class="material-symbols-outlined">close</i>
       </div>
-      <div id="linkWrapper">
-        <a href="index.html"><div class="menu-links link_hover">Hem</div></a>
-        <a href="erfarenhet.html"><div class="menu-links link_hover">Erfarenheter</div></a>
-        <a href="projekt.html"><div class="menu-links link_hover">Projekt</div></a>
-        <a href="om_mig.html"><div class="menu-links link_hover">Om mig</div></a>
+      <div id="link-wrapper">
+        <a href="index.html"><div class="menu-links" id="current-link">Hem</div></a>
+        <a href="erfarenhet.html"><div class="menu-links link-hover">Erfarenheter</div></a>
+        <a href="projekt.html"><div class="menu-links link-hover">Projekt</div></a>
+        <a href="om_mig.html"><div class="menu-links link-hover">Om mig</div></a>
       </div>
     </nav>
   <div class="fade-layer"></div>
-  <nav id="mainnav">
+  <nav id="main-nav">
     <a href="erfarenhet.html" aria-label="secondary">
-      <div class="linkdiv link_hover">
-        <h2>Erfarenhet</h2>
+      <div class="link-div link-hover">
+        <img src="img/florian-olivo-4hbJ-eymZ1o-unsplash.jpg" alt="restaurang 2" class="hide-on-phone" id="card-img">
+        <h2 class="self-center">Erfarenhet</h2>
+        <p class="hide-on-phone">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure earum vitae maiores accusantium, consectetur quia vel error. Eveniet, quaerat sequi.</p>  
       </div>
     </a>
     <a href="projekt.html">
-      <div class="linkdiv link_hover">
-        <h2>Projekt</h2>
+      <div class="link-div link-hover">
+        <img src="img/kumpan-electric-SYo5eazBrls-unsplash.jpg" alt="restaurang 2" class="hide-on-phone" id="card-img">
+        <h2 class="self-center">Projekt</h2>
+        <p class="hide-on-phone">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure earum vitae maiores accusantium, consectetur quia vel error. Eveniet, quaerat sequi.</p>  
       </div>
     </a>
     <a href="om_mig.html">
-      <div class="linkdiv link_hover">
-        <h2>Om mig</h2>
+      <div class="link-div link-hover">
+        <img src="img/hd-wallpaper-gdb8119592-1920.jpg" alt="restaurang 2" class="hide-on-phone" id="card-img">
+        <h2 class="self-center">Om mig</h2>
+        <p class="hide-on-phone">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure earum vitae maiores accusantium, consectetur quia vel error. Eveniet, quaerat sequi.</p>  
       </div>
     </a>
-  </nav>
+  </nav> 
   <footer>
     <a href="https://www.linkedin.com/in/lucas-norrflod-8b50b531a/">
       <i class="fa fa-linkedin-square biggericon" id="linkedin"></i>
     </a>
-    <a href="pdf/Cv-2025.pdf" download="lucas_norrflod_cv"><div class="link_hover" id="download_container">Hämta CV</div></a>
+    <a href="pdf/Cv-2025.pdf" download="lucas_norrflod_cv"><div class="link-hover" id="download_container">Hämta CV</div></a>
   </footer>
 <script src="js/main.js"></script>
 </body>

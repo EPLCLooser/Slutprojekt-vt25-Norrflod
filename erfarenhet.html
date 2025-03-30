@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Norrflod erfarenheter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Norrflod</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&"/>
-</head>
+    <link rel="stylesheet" href="">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
 <body id="erfarenhet">
   <header>
     <div class="menu-button">
@@ -20,16 +24,16 @@
       <div class="close-button">
         <i class="material-symbols-outlined">close</i>
       </div>
-      <div id="linkWrapper">
-        <a href="index.html"><div class="menu-links">Hem</div></a>
-        <a href="erfarenhet.html"><div class="menu-links">Erfarenheter</div></a>
-        <a href="projekt.html"><div class="menu-links">Projekt</div></a>
-        <a href="om_mig.html"><div class="menu-links">Om mig</div></a>
+      <div id="link-wrapper">
+        <a href="index.html"><div class="menu-links link-hover">Hem</div></a>
+        <a href="erfarenhet.html"><div class="menu-links" id="current-link">Erfarenheter</div></a>
+        <a href="projekt.html"><div class="menu-links link-hover">Projekt</div></a>
+        <a href="om_mig.html"><div class="menu-links link-hover">Om mig</div></a>
       </div>
     </nav>
   <div class="fade-layer"></div>
-  <main class="main_container">
-    <section class="ul_div">
+  <main class="main_container" id="er-main-grid">
+    <section class="ul_div" id="sc1">
       <h2 class="ul_h2">Jobb</h2>
       <ul>
         <li>Jobb1</li>
@@ -37,7 +41,7 @@
         <li>Jobb3</li>
       </ul>
     </section>
-    <section class="ul_div">
+    <section class="ul_div" id="sc2">
       <h2 class="ul_h2">Utbildning</h2>
       <ul>
         <li>Utbildning1</li>
@@ -45,11 +49,17 @@
         <li>Utbildning3</li>
       </ul>
     </section>
-    <section class="text_sec">
+    <section class="text_sec" id="sc3">
+      <h2 class="svart-text">Erfarenheter</h2>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, voluptatibus nulla minus vitae recusandae blanditiis quidem optio cupiditate laboriosam in animi quibusdam dolorum vero amet repellat tenetur, ullam iure itaque quae ipsam qui saepe sapiente, ad veniam? Laborum ex obcaecati a, et doloremque veritatis dolorem saepe in. Vero officia minima laborum quibusdam, provident est iusto explicabo veniam culpa. Doloribus nostrum explicabo voluptates quam velit, ipsum illum quibusdam exercitationem voluptatem laboriosam dolorum voluptatibus voluptas provident non voluptate laborum! Nobis fugit vel cum a iusto, laboriosam eius voluptatibus doloribus obcaecati autem, quibusdam explicabo accusantium. Et cupiditate odit neque voluptatum. Minima, vel ut provident iure, veritatis neque odio assumenda repellat voluptates incidunt at, temporibus nam sequi explicabo. Ab iste eos veniam nam vel neque, quisquam, ipsam iusto sit culpa illo quibusdam eius id blanditiis! Vitae, mollitia atque veritatis est non voluptatibus, facilis quia asperiores, excepturi assumenda repudiandae sit dicta nihil eveniet deserunt qui consequuntur perferendis nemo modi. Incidunt voluptate commodi molestias fugit assumenda. Nostrum iste in facilis dolor consequuntur ex accusantium asperiores, quasi eaque corporis voluptas assumenda incidunt sequi aut maxime ducimus ratione quas? Hic alias perferendis officia eligendi corrupti inventore voluptas consequuntur, esse ipsum, quo atque iure nihil aperiam totam, ex vero!
     </section>
   </main>
-  <footer></footer>
-    <script src="js/main.js"></script>
+  <footer>
+    <a href="https://www.linkedin.com/in/lucas-norrflod-8b50b531a/">
+      <i class="fa fa-linkedin-square biggericon" id="linkedin"></i>
+    </a>
+    <a href="pdf/Cv-2025.pdf" download="lucas_norrflod_cv"><div class="link-hover" id="download_container">Hämta CV</div></a>
+  </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>

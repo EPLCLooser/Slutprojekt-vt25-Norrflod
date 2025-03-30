@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Norrflod Projekt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Norrflod</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&"/>
-</head>
+    <link rel="stylesheet" href="">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  </head>
 <body id="projekt">
   <header>
     <div class="menu-button">
@@ -20,16 +24,16 @@
       <div class="close-button">
         <i class="material-symbols-outlined">close</i>
       </div>
-      <div id="linkWrapper">
-        <a href="index.html"><div class="menu-links">Hem</div></a>
-        <a href="erfarenhet.html"><div class="menu-links">Erfarenheter</div></a>
-        <a href="projekt.html"><div class="menu-links">Projekt</div></a>
-        <a href="om_mig.html"><div class="menu-links">Om mig</div></a>
+      <div id="link-wrapper">
+        <a href="index.html"><div class="menu-links link-hover">Hem</div></a>
+        <a href="erfarenhet.html"><div class="menu-links link-hover">Erfarenheter</div></a>
+        <a href="projekt.html"><div class="menu-links" id="current-link">Projekt</div></a>
+        <a href="om_mig.html"><div class="menu-links link-hover">Om mig</div></a>
       </div>
     </nav>
-  <div class="fade-layer"></div>
-  <main class="main_container">
-    <section id="prog_sec">
+    <div class="fade-layer"></div>
+  <main class="main_container" id="pro-grid">
+    <section class="ul_div self-center" id="prog-sec">
       <h2 class="ul_h2">Programmeringsspråk</h2>
       <ul>
         <li>Python</li>
@@ -38,12 +42,18 @@
         <li>Ruby</li>
       </ul>
     </section>  
-    <section class="text_sec">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus facilis alias error. Sed eligendi totam ea amet recusandae accusantium veniam velit aliquid magnam aliquam ut vero possimus corrupti, iste quia ipsam unde architecto accusamus quaerat maxime nisi harum ullam iure? Vitae tempora voluptates dolore commodi atque impedit eligendi ab modi fugit ipsa architecto ut, iusto, quasi quod deleniti fuga quo doloribus molestias nam quisquam eaque? Minus nostrum eos impedit mollitia reprehenderit asperiores sit ipsum vitae, iusto facere facilis eaque commodi maxime velit sapiente praesentium eius ex, molestias quisquam rerum deleniti hic unde quasi iste? Libero, ab. Quia dolorum corrupti exercitationem maxime eius quam tempora expedita sint aperiam quo, voluptas itaque nihil consectetur dolore voluptate ipsam illo asperiores omnis minus aut dolor eveniet. Dicta dolor nihil ipsam atque similique hic voluptate iure necessitatibus doloribus voluptatibus nostrum aliquam autem minima, reprehenderit debitis unde omnis quia? Nisi, repudiandae? Tempora voluptates ratione quisquam quas laudantium tenetur fugit. At architecto veniam magni reiciendis dolorum cum facilis blanditiis temporibus, impedit, deserunt possimus incidunt laudantium voluptas asperiores! Molestiae atque itaque cupiditate tempora ut fugiat! Impedit maxime aut natus, tempora iure esse magni temporibus earum odio, quisquam fugit atque repellat reprehenderit assumenda dolor quidem similique voluptas vel necessitatibus!
+    <img src="img/kenny-eliason-38XhGPwzI3U-unsplash.jpg" alt="projekt1-bild" class="pro-imgs self-center hide-on-phone" id="pro-img1">
+    <img src="img/lenin-estrada-OI1ToozsKBw-unsplash.jpg" alt="projekt2-bild" class="pro-imgs self-center hide-on-phone" id="pro-img2">
+    <section class="text_sec" id="text-area">
+      <h2 class="svart-text">Projekt</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus facilis alias error. Sed eligendi totam ea amet recusandae accusantium veniam velit aliquid magnam aliquam ut vero possimus corrupti, iste quia ipsam unde architecto accusamus quaerat maxime nisi harum ullam iure? Vitae tempora voluptates dolore commodi atque impedit eligendi ab modi fugit ipsa architecto ut, iusto, quasi quod deleniti fuga quo doloribus molestias nam quisquam eaque? Minus nostrum eos impedit mollitia reprehenderit asperiores sit ipsum vitae, iusto facere facilis eaque commodi maxime velit sapiente praesentium eius ex, molestias quisquam rerum deleniti hic unde quasi iste? Libero, ab. Quia dolorum corrupti exercitationem maxime eius quam tempora expedita sint aperiam quo, voluptas itaque nihil consectetur dolore voluptate ipsam illo asperiores omnis minus aut dolor eveniet.</p><p> Dicta dolor nihil ipsam atque similique hic voluptate iure necessitatibus doloribus voluptatibus nostrum aliquam autem minima, reprehenderit debitis unde omnis quia? Nisi, repudiandae? Tempora voluptates ratione quisquam quas laudantium tenetur fugit. At architecto veniam magni reiciendis dolorum cum facilis blanditiis temporibus, impedit, deserunt possimus incidunt laudantium voluptas asperiores! Molestiae atque itaque cupiditate tempora ut fugiat! Impedit maxime aut natus, tempora iure esse magni temporibus earum odio, quisquam fugit atque repellat reprehenderit assumenda dolor quidem similique voluptas vel necessitatibus!</p>
     </section>
   </main>
   <footer>
-
+    <a href="https://www.linkedin.com/in/lucas-norrflod-8b50b531a/">
+      <i class="fa fa-linkedin-square biggericon" id="linkedin"></i>
+    </a>
+    <a href="pdf/Cv-2025.pdf" download="lucas_norrflod_cv"><div class="link-hover" id="download_container">Hämta CV</div></a>
   </footer>
     <script src="js/main.js"></script>
 </body>
