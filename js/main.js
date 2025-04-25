@@ -11,6 +11,5 @@ function showMenu(){
     let layer = document.querySelector(".fade-layer")
 
     menu.classList.toggle("show")
-
     layer.classList.toggle("visible")
 }

@@ -14,7 +14,6 @@ a{
     text-decoration: none;
 }
 
-
 h2{
     color: white;
     font-family: "Kanit", sans-serif;
@@ -302,6 +301,15 @@ img {
     #linkedin:hover{
         color: black;
     }
+
+    .desktop_menu_links{
+        width: 25vw;
+    }
+
+    .desktop_menu{
+        display: flex;
+        width: 100%;
+    }
     
     #erfarenhet{
         display: grid;
@@ -309,7 +317,7 @@ img {
     }
     #index{
         display: grid;
-        grid-template-rows: 100vh 90vh 10vh;
+        grid-template-rows: 100vh 20vh 90vh 10vh;
     }
     #ommig{
         display: grid;
@@ -372,9 +380,8 @@ img {
         display: grid;
         grid-template-columns: 40vw 60vw;
         grid-template-areas: 
+        'imgs imgs'
         'prog tex'
-        'img1 tex'
-        'img2 tex'
         ;
     }
     #text-area{
