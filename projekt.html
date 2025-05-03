@@ -11,7 +11,8 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  </head>
+      <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    </head>
 <body id="projekt">
   <header>
     <div class="menu-button">
@@ -19,6 +20,12 @@
     </div>
     <img src="img/hd-wallpaper-gdb8119592-1920.jpg" alt="Bild på vattenfall">
   </header>
+  <nav class="desktop_menu hide-on-phone">
+    <a href="index.html"><div class="desktop_menu_links link-hover">Hem</div></a>
+    <a href="erfarenhet.html"><div class="desktop_menu_links link-hover">Erfarenheter</div></a>
+    <a href="projekt.html"><div class="desktop_menu_links"  id="current-link">Projekt</div></a>
+    <a href="om_mig.html"><div class="desktop_menu_links link-hover">Om mig</div></a>
+  </nav>
     <nav class="menu" aria-label="primary">
       <div class="close-button">
         <i class="material-symbols-outlined">close</i>
@@ -32,17 +39,21 @@
     </nav>
     <div class="fade-layer"></div>
   <main class="main_container" id="pro-grid">
-    <div id="slideshow">
-      <img src="img/kenny-eliason-38XhGPwzI3U-unsplash.jpg" alt="projekt1-bild" class="pro-imgs self-center hide-on-phone" id="pro-img1">
-      <img src="img/lenin-estrada-OI1ToozsKBw-unsplash.jpg" alt="projekt2-bild" class="pro-imgs self-center hide-on-phone" id="pro-img2">  
+    <div id="slideshow_container">
+      <img id="slideshow" src="img/lenin-estrada-OI1ToozsKBw-unsplash.jpg" alt="Slideshow Image" />
+      <em>Klicka på bild för bildspel</em>
     </div>
     <section class="ul_div self-center" id="prog-sec">
       <h2 class="ul_h2">Programmeringsspråk</h2>
       <ul>
         <li>Python</li>
+        <i class="devicon-python-plain"></i>
         <li>HTML</li>
+        <i class="devicon-html5-plain"></i>
         <li>C++</li>
+        <i class="devicon-cplusplus-plain"></i>
         <li>Ruby</li>
+        <i class="devicon-ruby-plain"></i>
       </ul>
     </section>  
     <section class="text_sec" id="text-area">

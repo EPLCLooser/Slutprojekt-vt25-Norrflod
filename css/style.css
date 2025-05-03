@@ -7,7 +7,6 @@ body{
     font-family: "Kanit", sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-size: 1.5rem;
 }
 
 a{
@@ -140,8 +139,6 @@ h2{
 .text_sec{
     max-width: 700px;
     max-height: 80vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
 }
 #download_container{
     color: white;
@@ -151,13 +148,12 @@ h2{
 }
 
 #ansiktsimg{
-    border-radius: 100px;
-    object-fit: fill;
+    border-radius: 200px;
+    object-fit: cover;
     width: 200px;
     height: 200px;
-    filter: grayscale(100%);
     align-self: center;
-    border: black solid 2px;
+    border: var(--themeColor) solid 2px;
 }
 ul{
     margin-right: 16px;
@@ -219,8 +215,8 @@ img {
     width: 100%;
 }
 #current-link{
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
 }
 .ul_div{
     background-color: var(--themeColor);
@@ -237,10 +233,71 @@ img {
 }
 #projekt{
     display: grid; 
-    grid-template-rows: 30vh auto 10vh;
+}
+
+#slideshow {
+    cursor: pointer;
+    max-width: 600px;
+    max-height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#slideshow_container{
+    display: flex;
+    flex-direction: column;
+}
+
+#bubblor_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.om_mig_bubblor{
+    border-radius: 75px;
+    margin: 2.5vh;
+    height: 120px;
+    width: 120px;
+    background-color: white;
+    border: 2px var(--themeColor) solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--themeColor);
+    font-size: 80%;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid var(--themeColor);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 70vw;
+    max-width: 300px;
+    color: var(--themeColor);
+}
+
+.popup .close-popup {
+    margin-top: 10px;
+    cursor: pointer;
+    color: var(--themeColor);
+    font-weight: bold;
+    background-color: white;
 }
 
 @media screen and (max-width: 500px){
+    body{
+        font-size: 1rem;
+    }
     #erfarenhet{
         display: grid;
         grid-template-rows: 30vh auto 10vh;
@@ -251,7 +308,10 @@ img {
     }
     #ommig{
         display: grid;
-        grid-template-rows: 30vh 300px auto auto 10vh;
+        grid-template-rows: 30vh auto auto 10vh;
+    }
+    #projekt{
+        grid-template-rows: 30vh auto 10vh;
     }
 
     .link-div{
@@ -262,7 +322,7 @@ img {
     }
 
     h2{
-        font-size: smaller;
+        font-size: 2rem;
     }
 
     .menu-links{
@@ -295,8 +355,15 @@ img {
     }
 }
 @media screen and (min-width: 501px){
+    body{
+        font-size: 1.5rem;
+    }
+    #projekt{
+        grid-template-rows: 30vh 20vh auto 10vh;
+    }
     .link-hover:hover{
         background-color: black !important;
+        color: white;
     }
     #linkedin:hover{
         color: black;
@@ -304,27 +371,31 @@ img {
 
     .desktop_menu_links{
         width: 25vw;
+        display: flex;
+        justify-content: center;
+        color: black;
     }
 
     .desktop_menu{
         display: flex;
-        width: 100%;
+        width: 100vw;
     }
     
     #erfarenhet{
         display: grid;
-        grid-template-rows: 30vh auto 10vh;
+        grid-template-rows: 30vh 20vh auto 10vh;
     }
     #index{
         display: grid;
-        grid-template-rows: 100vh 20vh 90vh 10vh;
+        grid-template-rows: 100vh 90vh 10vh;
     }
     #ommig{
         display: grid;
-        grid-template-rows: 30vh 400px 50vh 20vh;
+        grid-template-rows: 30vh 20vh 400px 50vh 20vh;
         grid-template-columns: 900px 1fr;
         grid-template-areas: 
         'hd hd'
+        'nav nav'
         'tex profile'
         'tex sc1'
         'ft ft'
@@ -347,7 +418,7 @@ img {
     }  
     #er-main-grid{
         display: grid;  
-        grid-template-columns: 40vw 60vw;
+        grid-template-columns: 40vw 55vw;
         grid-template-areas: 
         'sc1 sc3'
         'sc2 sc3'
@@ -360,7 +431,7 @@ img {
         grid-area: sc2; 
     }
     .ul_div{
-        width: min(90%, 500px);
+        width: 90%;
         font-size: 1.5rem;
     }
     .ul_div ul li{
@@ -386,29 +457,26 @@ img {
     }
     #text-area{
         grid-area: tex;
-        overflow: scroll;
+        text-overflow: scroll;
         overflow-x: hidden;
     }
     #prog-sec{
         grid-area: prog;
         width: 90%;
     }
-    #pro-img1{
-        grid-area: img1;
-    }
-    #pro-img2{
-        grid-area: img2;
-    }
     .pro-imgs{
         border-radius: 10px;
         height: 30vh;
         width: 90%;
         margin: 20px;
+        grid-area: imgs;
+        display: flex;
+        justify-self: center;
     }
     #ansiktsimg{
         grid-area: profile;
-        height: 300px;
         width: 300px;
+        height: 300px;
         border-radius: 150px;
     }
     #ommig footer{
@@ -416,5 +484,8 @@ img {
     }
     #om-mig-hd{
         grid-area: hd;
+    }
+    #slideshow:hover{
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 4);
     }
 }
