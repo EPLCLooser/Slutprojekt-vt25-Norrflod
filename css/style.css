@@ -7,6 +7,12 @@ body{
     font-family: "Kanit", sans-serif;
     font-weight: 300;
     font-style: normal;
+    width: 100vw;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+html{
+    width: 100vw;
 }
 
 a{
@@ -133,12 +139,12 @@ h2{
     height: 90vh;
     width: 100%;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: space-around;
 }
 .text_sec{
     max-width: 700px;
-    max-height: 80vh;
+    padding: 20px;
 }
 #download_container{
     color: white;
@@ -218,6 +224,7 @@ img {
     height: auto;
     border-radius: 5px;
     margin: 20px;
+    width: auto;
 }
 .ul_h2{
     margin-left: 16px;
@@ -229,8 +236,7 @@ img {
 
 #slideshow {
     cursor: pointer;
-    max-width: 600px;
-    max-height: 400px;
+    width: 80vw;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -238,13 +244,8 @@ img {
 #slideshow_container{
     display: flex;
     flex-direction: column;
-}
-
-#bubblor_container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
     align-items: center;
+    margin: 20px;
 }
 
 .om_mig_bubblor{
@@ -291,6 +292,17 @@ img {
     text-align: center;
     text-decoration: underline;
 }
+ul{
+    margin: 0px;
+}
+
+#icon_container {
+    display: flex;
+    font-size: 20vw;
+    justify-content: space-evenly;
+}
+#icon_container  > :nth-child(odd){
+    padding-top: 20vw;}
 
 @media screen and (max-width: 500px){
     body{
@@ -306,19 +318,26 @@ img {
     }
     #ommig{
         display: grid;
-        grid-template-rows: 30vh auto auto auto 10vh;
-    }
-    #projekt{
         grid-template-rows: 30vh auto 10vh;
     }
-
+    #projekt{
+        grid-template-rows: 30vh auto auto 40vw auto 10vh;
+    }
+    .bubblor_container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
     .link-div{
         width: 90vw;
         height: auto;
         justify-content: center;
         align-items: center;
     }
-
+    .ul_h2{
+        font-size: 1rem;
+    }
     h2{
         font-size: 2rem;
     }
@@ -372,7 +391,7 @@ img {
         font-size: 1.5rem;
     }
     #projekt{
-        grid-template-rows: 30vh 20vh auto 10vh;
+        grid-template-rows: 30vh 10vh auto 10vh;
     }
     .link-hover:hover{
         background-color: black !important;
@@ -386,6 +405,9 @@ img {
         display: flex;
         justify-content: center;
         color: black;
+        border-right: 2px var(--themeColor) solid;
+        border-bottom: 2px var(--themeColor) solid;
+        border-top: 2px var(--themeColor) solid;
     }
 
     .desktop_menu{
@@ -395,7 +417,7 @@ img {
     
     #erfarenhet{
         display: grid;
-        grid-template-rows: 30vh 20vh auto 10vh;
+        grid-template-rows: 30vh 10vh max(80vh, 600px) 10vh;
     }
     #index{
         display: grid;
@@ -403,17 +425,26 @@ img {
     }
     #ommig{
         display: grid;
-        grid-template-rows: 30vh 20vh auto 20vh;
-        grid-template-columns: 400px 1fr;
+        grid-template-rows: 30vh 10vh auto 10vh;
         grid-template-areas: 
-        'hd hd'
-        'nav nav'
-        'profile sec'
-        'ft ft'
+        'hd'
+        'nav'
+        'sec'
+        'ft'
         ;
     }
-    .om-mig-text{
+
+    .om_mig_desktop{
         grid-area: sec;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+
+    .om-mig-text{
+        width: 300px;
+        margin: 20px;
     }
     .link-div{
         width: 25vw;
@@ -433,6 +464,7 @@ img {
     #er-main-grid{
         display: grid;  
         grid-template-columns: 40vw 55vw;
+        grid-template-rows: 300px 300px;
         grid-template-areas: 
         'sc1 sc3'
         'sc2 sc3'
@@ -461,23 +493,10 @@ img {
         padding-top: 0px;
         padding-bottom: 0px;
     }
-    #pro-grid{
-        display: grid;
-        grid-template-columns: 40vw 60vw;
-        grid-template-areas: 
-        'imgs imgs'
-        'prog tex'
-        ;
-    }
     #text-area{
         grid-area: tex;
-        text-overflow: scroll;
-        overflow-x: hidden;
-    }
-    #prog-sec{
-        grid-area: prog;
-        width: 90%;
-    }
+    }    
+
     .pro-imgs{
         border-radius: 10px;
         height: 30vh;
@@ -488,7 +507,6 @@ img {
         justify-self: center;
     }
     #ansiktsimg{
-        grid-area: profile;
         width: 300px;
         height: 300px;
         border-bottom: var(--themeColor) solid 2px;
