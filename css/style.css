@@ -147,14 +147,6 @@ h2{
     border: black solid 1px;
 }
 
-#ansiktsimg{
-    border-radius: 200px;
-    object-fit: cover;
-    width: 200px;
-    height: 200px;
-    align-self: center;
-    border: var(--themeColor) solid 2px;
-}
 ul{
     margin-right: 16px;
 }
@@ -294,6 +286,12 @@ img {
     background-color: white;
 }
 
+.om-mig-h2{
+    color: var(--themeColor);
+    text-align: center;
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 500px){
     body{
         font-size: 1rem;
@@ -308,7 +306,7 @@ img {
     }
     #ommig{
         display: grid;
-        grid-template-rows: 30vh auto auto 10vh;
+        grid-template-rows: 30vh auto auto auto 10vh;
     }
     #projekt{
         grid-template-rows: 30vh auto 10vh;
@@ -323,6 +321,16 @@ img {
 
     h2{
         font-size: 2rem;
+    }
+
+    #ansiktsimg{
+        border-radius: 200px;
+        object-fit: cover;
+        width: 200px;
+        height: 200px;
+        align-self: center;
+        margin: 30px;
+        border: var(--themeColor) solid 2px;
     }
 
     .menu-links{
@@ -346,7 +354,9 @@ img {
         flex-direction: column;
         align-items: center;
     }
-
+    .om-mig-h2{
+        font-size: 1rem;
+    }
     #main-nav{
         flex-direction: column;
     }
@@ -355,6 +365,9 @@ img {
     }
 }
 @media screen and (min-width: 501px){
+    .hide-on-desktop{
+        display: none;
+    }
     body{
         font-size: 1.5rem;
     }
@@ -368,7 +381,6 @@ img {
     #linkedin:hover{
         color: black;
     }
-
     .desktop_menu_links{
         width: 25vw;
         display: flex;
@@ -391,15 +403,17 @@ img {
     }
     #ommig{
         display: grid;
-        grid-template-rows: 30vh 20vh 400px 50vh 20vh;
-        grid-template-columns: 900px 1fr;
+        grid-template-rows: 30vh 20vh auto 20vh;
+        grid-template-columns: 400px 1fr;
         grid-template-areas: 
         'hd hd'
         'nav nav'
-        'tex profile'
-        'tex sc1'
+        'profile sec'
         'ft ft'
         ;
+    }
+    .om-mig-text{
+        grid-area: sec;
     }
     .link-div{
         width: 25vw;
@@ -477,13 +491,16 @@ img {
         grid-area: profile;
         width: 300px;
         height: 300px;
-        border-radius: 150px;
+        border-bottom: var(--themeColor) solid 2px;
     }
     #ommig footer{
         grid-area: ft;
     }
     #om-mig-hd{
         grid-area: hd;
+    }
+    .om-mig-h2{
+        font-size: 2rem;
     }
     #slideshow:hover{
         box-shadow: 0 4px 10px rgba(0, 0, 0, 4);
