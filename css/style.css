@@ -225,6 +225,7 @@ img {
     border-radius: 5px;
     margin: 20px;
     width: auto;
+    padding: 10px;
 }
 .ul_h2{
     margin-left: 16px;
@@ -236,7 +237,6 @@ img {
 
 #slideshow {
     cursor: pointer;
-    width: 80vw;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
@@ -301,8 +301,9 @@ ul{
     font-size: 20vw;
     justify-content: space-evenly;
 }
-#icon_container  > :nth-child(odd){
-    padding-top: 20vw;}
+#icon_container > :nth-child(odd){
+    align-self: end;
+}
 
 @media screen and (max-width: 500px){
     body{
@@ -352,6 +353,10 @@ ul{
         border: var(--themeColor) solid 2px;
     }
 
+    #slideshow{
+        width: 80vw;
+    }
+
     .menu-links{
         width: 50vw;
         height: 15vh;
@@ -391,8 +396,41 @@ ul{
         font-size: 1.5rem;
     }
     #projekt{
-        grid-template-rows: 30vh 10vh auto 10vh;
+        grid-template-rows: 30vh 10vh 60vh auto 10vh;
+        grid-template-columns: 35vw 65vw;
+        grid-template-areas:
+        'hd hd'
+        'nav nav'
+        'sec img'
+        'as tex'
+        'ft ft'
+        ;
     }
+
+    #icon_container {
+        grid-area: as;
+        flex-direction: column;
+        font-size: 10vw;
+        padding-left: 5vw;
+    }
+
+    #slideshow{
+        width: 50vw;
+        height: 80%;
+    }
+
+    #pro-header{
+        grid-area: hd;
+    }
+
+    #prog-sec{
+        grid-area: sec;
+    }
+
+    #footer{
+        grid-area: ft;
+    }
+
     .link-hover:hover{
         background-color: black !important;
         color: white;
@@ -402,8 +440,10 @@ ul{
     }
     .desktop_menu_links{
         width: 25vw;
+        height: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
         color: black;
         border-right: 2px var(--themeColor) solid;
         border-bottom: 2px var(--themeColor) solid;
@@ -411,13 +451,20 @@ ul{
     }
 
     .desktop_menu{
+        grid-area: nav;
         display: flex;
         width: 100vw;
     }
-    
+
     #erfarenhet{
         display: grid;
-        grid-template-rows: 30vh 10vh max(80vh, 600px) 10vh;
+        grid-template-rows: 30vh 10vh auto 10vh;
+        grid-template-areas: 
+        'hd'
+        'nav'
+        'mn'
+        'ft'
+        ;
     }
     #index{
         display: grid;
@@ -429,13 +476,12 @@ ul{
         grid-template-areas: 
         'hd'
         'nav'
-        'sec'
+        'mn'
         'ft'
         ;
     }
 
     .om_mig_desktop{
-        grid-area: sec;
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
@@ -477,8 +523,11 @@ ul{
         grid-area: sc2; 
     }
     .ul_div{
-        width: 90%;
+        width: 80%;
+        height: 80%;
+        margin: 20px;
         font-size: 1.5rem;
+        padding-bottom: 30px;
     }
     .ul_div ul li{
         margin-top: 15px;
@@ -495,6 +544,8 @@ ul{
     }
     #text-area{
         grid-area: tex;
+        padding-left: 10vw;
+        padding-right: 10vw;
     }    
 
     .pro-imgs{
@@ -511,14 +562,13 @@ ul{
         height: 300px;
         border-bottom: var(--themeColor) solid 2px;
     }
-    #ommig footer{
-        grid-area: ft;
-    }
-    #om-mig-hd{
-        grid-area: hd;
-    }
     .om-mig-h2{
         font-size: 2rem;
+    }
+
+    #slideshow_container{
+        grid-area: img;
+        height: 100%;
     }
     #slideshow:hover{
         box-shadow: 0 4px 10px rgba(0, 0, 0, 4);

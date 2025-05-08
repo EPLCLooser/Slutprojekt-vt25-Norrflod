@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
 <body id="ommig">
-  <header id="om-mig-hd">
+  <header>
     <div class="menu-button">
       <i class="material-symbols-outlined">menu</i>
     </div>
@@ -25,17 +25,6 @@
     <a href="projekt.html"><div class="desktop_menu_links link-hover">Projekt</div></a>
     <a href="om_mig.html"><div class="desktop_menu_links"  id="current-link">Om mig</div></a>
   </nav>
-    <nav class="menu" aria-label="primary">
-      <div class="close-button">
-        <i class="material-symbols-outlined">close</i>
-      </div>
-      <div id="link-wrapper">
-        <a href="index.html"><div class="menu-links link-hover">Hem</div></a>
-        <a href="erfarenhet.html"><div class="menu-links link-hover">Erfarenhet</div></a>
-        <a href="projekt.html"><div class="menu-links link-hover">Projekt</div></a>
-        <a href="om_mig.html"><div class="menu-links" id="current-link">Om mig</div></a>
-      </div>
-    </nav>
   <div class="fade-layer"></div>
   <section class="bubblor_container om_mig_desktop">
     <img src="img/Profilbild_cv.png" alt="Ansiktsbild" id="ansiktsimg" class="self-center">
@@ -52,13 +41,23 @@
     <div class="om_mig_bubblor hide-on-desktop" data-text="Träning håller mig stark Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor libero omnis sed cum minus accusantium voluptates aspernatur tempora optio tempore."><h3>Träning</h3></div>
     <div class="om_mig_bubblor hide-on-desktop" data-text="Jag gillar det mesta i övrigt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor libero omnis sed cum minus accusantium voluptates aspernatur tempora optio tempore."><h3>Övrigt</h3></div>
   </section>
-  <footer>
+  <footer id="footer">
     <a href="https://www.linkedin.com/in/lucas-norrflod-8b50b531a/">
       <i class="fa fa-linkedin-square biggericon" id="linkedin"></i>
     </a>
     <a href="pdf/Cv-2025.pdf" download="lucas_norrflod_cv"><div class="link-hover" id="download_container">Hämta CV</div></a>
   </footer>
-    <script src="js/main.js"></script>
+  <nav class="menu" aria-label="primary">
+    <div class="close-button">
+      <i class="material-symbols-outlined">close</i>
+    </div>
+    <div id="link-wrapper">
+      <a href="index.html"><div class="menu-links link-hover">Hem</div></a>
+      <a href="erfarenhet.html"><div class="menu-links link-hover">Erfarenhet</div></a>
+      <a href="projekt.html"><div class="menu-links link-hover">Projekt</div></a>
+      <a href="om_mig.html"><div class="menu-links" id="current-link">Om mig</div></a>
+    </div>
+  </nav>
+  <script src="js/main.js"></script>
 </body>
 </html>
-
